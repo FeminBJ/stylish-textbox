@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 30px;
+    background: blueviolet;
+}
+.inputtext
+{
+    position:relative;
+    width: 200px;
+}
+.inputtext input
+{
+    width: 100%;
+    padding: 10px;
+    border:2px solid white;
+    background-color: blueviolet;
+    border-radius: 5px;
+    outline: none;
+    color: aliceblue;
+    font-size: 1em; 
+}
+
+.inputtext span
+{
+    position:absolute;
+    left: 0;
+    padding: 10px;
+    color: white;
+    pointer-events: none;
+    font-weight: 100;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.inputtext input:valid ~span,
+.inputtext input:focus ~span{
+    color: coral;
+    transform: translateX(10px) translateY(-7px);
+    padding: 0 10px;
+    background: blueviolet;
+    font-size: 10px;
+    letter-spacing: 1em;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
